@@ -79,7 +79,7 @@ class OpensubsData:
                     else:
                         sentList.append((strbuf.strip(), startTime, datetime.datetime.strptime(elemVal, timeFormat)))
                         strbuf = ''
-                else:
+                elif elem.tag == "w":
                     try:
                         strbuf = strbuf + " " + elem.text
                     except:
